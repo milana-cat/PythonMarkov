@@ -24,5 +24,5 @@ def check_rules(rule_list, void_char):
     for n in range(0, len(rules)):
         rules[n] = rules[n].split("-")
     for s in rules:
-        if s[0].find(void_char) != -1 or s[1].finds(s[0]) != -1:
+        if s[0].find(void_char) != -1 or s[1].find(s[0]) != -1:
             return False
