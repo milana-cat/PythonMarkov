@@ -18,6 +18,10 @@ def start(rule_list, changed_string):
         else:
             break
 
+    #TODO return string here, not print to stdout!!
+    return "Вывод в консоли."
+
+
 
 def check_rules(rule_list, void_char):
     rules = rule_list.split("\n")
