@@ -23,7 +23,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="cmdsBox">
+     <widget class="QPlainTextEdit" name="cmdsBox">
       <property name="placeholderText">
        <string>Команды, каждая на своей строке</string>
       </property>

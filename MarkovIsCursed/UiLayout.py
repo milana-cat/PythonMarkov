@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
         self.inputBox = QtWidgets.QLineEdit(self.centralwidget)
         self.inputBox.setObjectName("inputBox")
         self.verticalLayout.addWidget(self.inputBox)
-        self.cmdsBox = QtWidgets.QTextEdit(self.centralwidget)
+        self.cmdsBox = QtWidgets.QPlainTextEdit(self.centralwidget)
         self.cmdsBox.setObjectName("cmdsBox")
         self.verticalLayout.addWidget(self.cmdsBox)
         self.runBtn = QtWidgets.QPushButton(self.centralwidget)
