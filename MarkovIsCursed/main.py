@@ -14,12 +14,12 @@ class App(QtWidgets.QMainWindow, Ui_MainWindow):
         self.runBtn.clicked.connect(self.run)
 
     def clearOutput(self):
-        self.outputBox.setText("")
+        self.outputBox.setPlainText("")
 
     def clearAll(self):
-        self.inputBox.setText("")
-        self.outputBox.setText("")
-        self.cmdsBox.setText("")
+        self.inputBox.clear()
+        self.outputBox.setPlainText("")
+        self.cmdsBox.setPlainText("")
 
     def run(self):
         text = self.inputBox.text()
