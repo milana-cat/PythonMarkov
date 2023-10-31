@@ -34,9 +34,9 @@ class App(QtWidgets.QMainWindow, Ui_MainWindow):
 
         if (check_rules(cmds, "#")):
             res = start(cmds, text)
-            self.outputBox.setText(res)
+            self.outputBox.setPlainText("\n".join(res))
         else:
-            self.outputBox.setText("В правилах есть ошибка.")
+            self.outputBox.setPlainText("В правилах есть ошибка.")
 
 
 if __name__ == '__main__':
