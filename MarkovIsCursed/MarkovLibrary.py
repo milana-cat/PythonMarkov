@@ -1,5 +1,6 @@
 def start(rule_list, changed_string):
     result = ""
+    _out = [changed_string]
     rules = rule_list.split(";")
     for n in range(0, len(rules)):
         rules[n] = rules[n].split("-")
@@ -14,9 +15,11 @@ def start(rule_list, changed_string):
                 continue
         changed_string = result
         if change_mark is True:
-            print(changed_string)
+            _out.append(changed_string)
         else:
             break
+
+    return _out
 
 
 def check_rules(rule_list, void_char):
@@ -26,3 +29,4 @@ def check_rules(rule_list, void_char):
     for s in rules:
         if s[0].find(void_char) != -1 or s[1].find(s[0]) != -1:
             return False
+    return True
