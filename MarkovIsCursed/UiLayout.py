@@ -50,7 +50,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "НАМ"))
         self.inputBox.setPlaceholderText(_translate("MainWindow", "Входная строка"))
-        self.cmdsBox.setPlaceholderText(_translate("MainWindow", "Команды через точку с запятой"))
+        self.cmdsBox.setPlaceholderText(_translate("MainWindow", "Команды через точку с запятой. Пустые команды недопустимы."))
         self.runBtn.setText(_translate("MainWindow", "Выполнить"))
         self.outputBox.setPlaceholderText(_translate("MainWindow", "Здесь будет вывод"))
         self.clearBtn.setText(_translate("MainWindow", "Очистить вывод"))

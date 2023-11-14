@@ -22,11 +22,9 @@ def start(rule_list, changed_string):
     return _out
 
 
-def check_rules(rule_list, void_char):
-    rules = rule_list.split("\n")
-    for n in range(0, len(rules)):
-        rules[n] = rules[n].split("-")
-    for s in rules:
-        if s[0].find(void_char) != -1 or s[1].find(s[0]) != -1:
+def check_rules(rule_list):
+    rules = rule_list.split(";")
+    for r in rules:
+        if len(r.split("-")) != 2:
             return False
     return True
