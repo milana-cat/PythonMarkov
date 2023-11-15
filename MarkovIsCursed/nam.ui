@@ -25,7 +25,7 @@
     <item>
      <widget class="QPlainTextEdit" name="cmdsBox">
       <property name="placeholderText">
-       <string>Команды через точку с запятой</string>
+       <string>Команды через точку с запятой. Пустые команды недопустимы.</string>
       </property>
      </widget>
     </item>
