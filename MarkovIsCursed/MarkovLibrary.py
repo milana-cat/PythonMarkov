@@ -5,8 +5,12 @@ def start(rule_list, changed_string):
     for n in range(0, len(rules)):
         rules[n] = rules[n].split("-")
     while True:
+        stop_mark=False
         change_mark = False
         for i in range(0, len(rules)):
+            if rules[i][1].find('*'):
+                rules[i][1]=rules[i][1].replace('*','')
+                stop_mark=True
             if changed_string.find(rules[i][0]) > -1:
                 result = changed_string.replace(rules[i][0], rules[i][1], 1)
                 change_mark = True
@@ -16,6 +20,8 @@ def start(rule_list, changed_string):
         changed_string = result
         if change_mark is True:
             _out.append(changed_string)
+            if stop_mark==True:
+                break
         else:
             break
 
@@ -23,6 +29,7 @@ def start(rule_list, changed_string):
 
 
 def check_rules(rule_list, void_char):
+
     rules = rule_list.split("\n")
     for n in range(0, len(rules)):
         rules[n] = rules[n].split("-")
