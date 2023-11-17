@@ -8,7 +8,7 @@ def start(rule_list, changed_string):
         stop_mark=False
         change_mark = False
         for i in range(0, len(rules)):
-            if rules[i][1].find('*'):
+            if rules[i][1].find('*')>-1:
                 rules[i][1]=rules[i][1].replace('*','')
                 stop_mark=True
             if changed_string.find(rules[i][0]) > -1:
