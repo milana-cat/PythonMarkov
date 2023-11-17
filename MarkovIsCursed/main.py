@@ -32,7 +32,7 @@ class App(QtWidgets.QMainWindow, Ui_MainWindow):
             self.outputBox.setText("Введите команды для выполнения!")
             return
 
-        if (check_rules(cmds, "#")):
+        if (check_rules(cmds)):
             res = start(cmds, text)
             self.outputBox.setPlainText("\n".join(res))
         else:
