@@ -32,10 +32,10 @@ class App(QtWidgets.QMainWindow, Ui_MainWindow):
             self.outputBox.setText("Введите команды для выполнения!")
             return
 
-        if (check_rules(cmds)):
+        try:
             res = start(cmds, text)
             self.outputBox.setPlainText("\n".join(res))
-        else:
+        except:
             self.outputBox.setPlainText("В правилах есть ошибка.")
 
 
