@@ -27,13 +27,15 @@ def start(rule_list, changed_string):
 
     return _out
 
+def check_word(word):
+    if word.find('*')>-1 or word.find('-')>-1 or word.find(';')>-1:
+        return False
+    return True
 
-
-def check_rules(rule_list, word):
+def check_rules(rule_list):
     rules = rule_list.split(";")
     for r in rules:
         if len(r.split("-")) != 2:
             return False
-    if word.find('*')>-1 or word.find('-')>-1 or word.find(';')>-1:
-        return False
+    
     return True

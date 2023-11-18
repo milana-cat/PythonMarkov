@@ -31,14 +31,18 @@ class App(QtWidgets.QMainWindow, Ui_MainWindow):
         if len(cmds) == 0:
             self.outputBox.setText("Введите команды для выполнения!")
             return
-        try:
-            if (check_rules(cmds, text)):
-                res = start(cmds, text)
-                self.outputBox.setPlainText("\n".join(res))
+        
+        if(check_word(text)):
+             
+            if (check_rules(cmds)):
+                        res = start(cmds, text)
+                        self.outputBox.setPlainText("\n".join(res))
+                        
             else:
+                self.outputBox.setPlainText("В правилах есть ошибка.")
+        else:
                 self.outputBox.setPlainText("Во входной строке не должно быть специальных символов правил: *, -, ;")
-        except:
-            self.outputBox.setPlainText("В правилах есть ошибка.")
+        
 
 
 if __name__ == '__main__':
